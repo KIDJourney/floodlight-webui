@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Floodlight OpenFlow Controller - Static Flow Pusher</title>
+    <title>流表</title>
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
@@ -43,7 +43,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html" id="home-button-title">Floodlight OpenFlow Controller </a>
+            <a class="navbar-brand" href="index.html" id="home-button-title">SDN控制器</a>
         </div>
         <!-- /.navbar-top-links -->
         <div class="navbar-default sidebar" role="navigation">
@@ -57,7 +57,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="page-header">Static Flow Pusher
+                <h3 class="page-header">下发静态流表
                     <div id="divSId"></div>
                 </h3>
             </div>
@@ -68,10 +68,10 @@
 
         <div class="row">
             <div class="col-md-1">
-                <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addRuleModal">Add New</a>
+                <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addRuleModal">新建流</a>
             </div>
             <div class="col-md-1">
-                <a href="#" class="btn btn-sm btn-danger" data-toggle="modal" id="btnDeleteAll">Delete All</a>
+                <a href="#" class="btn btn-sm btn-danger" data-toggle="modal" id="btnDeleteAll">删除所有流表</a>
             </div>
             <br/><br/>
         </div>
@@ -83,7 +83,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <i class="fa fa-table fa-fw"></i>Flows
+                        <i class="fa fa-table fa-fw"></i>流
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -106,17 +106,17 @@
                                 aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
-                        <h4 class="modal-title" id="myModalLabel2">Create</h4>
+                        <h4 class="modal-title" id="myModalLabel2">新建</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form">
                             <div class="form-group">
-                                <label>Switch</label>
+                                <label>交换机</label>
                                 <input class="form-control" type="text" id="switch" placeholder="MAC">
                             </div>
 
                             <div class="form-group">
-                                <label>Name</label>
+                                <label>名称</label>
                                 <input class="form-control" type="text" id="name" placeholder="flow-mod-1">
                             </div>
 
@@ -126,7 +126,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Priority</label>
+                                <label>优先级</label>
                                 <input class="form-control" type="text" id="priority" placeholder="32768">
                             </div>
 
@@ -139,10 +139,10 @@
                                 <label>Active</label>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" id="rbActive" name="check2" checked="checked"/> True
+                                        <input type="radio" id="rbActive" name="check2" checked="checked"/> 是
                                     </label>
                                     <label>
-                                        <input type="radio" id="rbPasive" name="check2"> False
+                                        <input type="radio" id="rbPasive" name="check2"> 否
                                     </label>
                                 </div>
                             </div>
@@ -153,12 +153,12 @@
                             </div>
 
                             <div class="form-group">
-                                <label>idle_timeout</label>
+                                <label>软过期</label>
                                 <input class="form-control" type="text" id="idle_timeout" placeholder="">
                             </div>
 
                             <div class="form-group">
-                                <label>hard_timeout</label>
+                                <label>硬过期</label>
                                 <input class="form-control" type="text" id="hard_timeout" placeholder="">
                             </div>
 

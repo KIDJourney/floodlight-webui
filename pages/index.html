@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Floodlight OpenFlow Controller | Controller Status</title>
+    <title>控制器状态</title>
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
@@ -44,7 +44,7 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="index.html" id="home-button-title">Floodlight OpenFlow Controller </a>
+            <a class="navbar-brand" href="index.html" id="home-button-title">SDN控制器 </a>
 
         </div>
 
@@ -61,7 +61,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="page-header">Controller</h3>
+                <h3 class="page-header">控制器</h3>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -77,7 +77,7 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge" id="controllerStatus">...</div>
-                                <div>Controller Status</div>
+                                <div>控制器状态</div>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge" id="controllerUpTime">...</div>
-                                <div>Uptime (HH-mm-ss)</div>
+                                <div>运行时间 (HH-mm-ss)</div>
                             </div>
                         </div>
                     </div>
@@ -108,9 +108,9 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge" id="controllerRole">...</div>
-                                <div>Controller Role <a href="#" class="btn btn-xs btn-success"
+                                <div>控制器规则 <a href="#" class="btn btn-xs btn-success"
                                                         data-toggle="modal"
-                                                        data-target=".bs-example-modal-sm">Change</a></div>
+                                                        data-target=".bs-example-modal-sm">修改</a></div>
                             </div>
                         </div>
                     </div>
@@ -130,13 +130,13 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge" id="switchCountDiv">0</div>
-                                <div>Switches</div>
+                                <div>交换机</div>
                             </div>
                         </div>
                     </div>
                     <a href="switches.html">
                         <div class="panel-footer">
-                            <span class="pull-left">See All</span>
+                            <span class="pull-left">查看所有</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -152,13 +152,13 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge" id="hostCountDiv">0</div>
-                                <div>Hosts</div>
+                                <div>主机</div>
                             </div>
                         </div>
                     </div>
                     <a href="hosts.html">
                         <div class="panel-footer">
-                            <span class="pull-left">See All</span>
+                            <span class="pull-left">查看所有</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -174,13 +174,13 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge" id="linkCountDiv">0</div>
-                                <div>Connections (Links)</div>
+                                <div>连接</div>
                             </div>
                         </div>
                     </div>
                     <a href="links.html">
                         <div class="panel-footer">
-                            <span class="pull-left">See All</span>
+                            <span class="pull-left">查看所有</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -196,13 +196,13 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge" id="portCountDiv">0</div>
-                                <div>Reserved Ports</div>
+                                <div>接收端口</div>
                             </div>
                         </div>
                     </div>
                     <a href="#">
                         <div class="panel-footer">
-                            <span class="pull-left">See All</span>
+                            <span class="pull-left">查看所有</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -216,7 +216,7 @@
             <div class="col-lg-4 col-md-4">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <i class="fa fa-dashboard fa-fw"></i>JVM Memory Bloat
+                        <i class="fa fa-dashboard fa-fw"></i>JVM内存使用情况
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -239,13 +239,13 @@
             <div class="col-lg-4">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <i class="fa fa-signal fa-fw"></i> Consumption Detail
+                        <i class="fa fa-signal fa-fw"></i> 内存使用细节
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="list-group">
                             <a href="#" class="list-group-item">
-                                <i class="fa fa-info fa-fw"></i> Total:
+                                <i class="fa fa-info fa-fw"></i> 总计:
                                     <span class="pull-right text-muted small">
                                         <em>
                                             <div id="totalMemoryDiv"></div>
@@ -253,7 +253,7 @@
                                     </span>
                             </a>
                             <a href="#" class="list-group-item">
-                                <i class="fa fa-info fa-fw"></i> Used:
+                                <i class="fa fa-info fa-fw"></i> 已使用:
                                     <span class="pull-right text-muted small">
                                         <em>
                                             <div id="usedMemoryDiv"></div>
@@ -261,7 +261,7 @@
                                     </span>
                             </a>
                             <a href="#" class="list-group-item">
-                                <i class="fa fa-info fa-fw"></i> Free:
+                                <i class="fa fa-info fa-fw"></i> 空闲:
                                     <span class="pull-right text-muted small">
                                         <em>
                                             <div id="freeMemoryDiv"></div>
@@ -279,7 +279,7 @@
             <div class="col-lg-4">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <i class="fa fa-table fa-fw"></i> Storage Tables
+                        <i class="fa fa-table fa-fw"></i> 存储数据库
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -295,7 +295,7 @@
             <div class="col-md-6 col-lg-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <i class="fa fa-table fa-fw"></i> Modules Loaded
+                        <i class="fa fa-table fa-fw"></i> 已加载的模块
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -310,7 +310,7 @@
 
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <i class="fa fa-table fa-fw"></i> All Modules
+                        <i class="fa fa-table fa-fw"></i> 所有模块
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -330,27 +330,27 @@
                                 aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
-                        <h4 class="modal-title" id="myModalLabel2">Change Role</h4>
+                        <h4 class="modal-title" id="myModalLabel2">切换模式</h4>
                     </div>
                     <div class="modal-body">
 
                         <div class="form-group">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" id="rbActive" name="iCheck"> ACTIVE
+                                    <input type="radio" id="rbActive" name="iCheck"> 激活
                                 </label>
                             </div>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" id="rbStandBy" name="iCheck"> STANDBY
+                                    <input type="radio" id="rbStandBy" name="iCheck"> 待命
                                 </label>
                             </div>
                         </div>
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-xs btn-default" data-dismiss="modal">Cancel</button>
-                        <button type="button" id="btnChangeRole" class="btn btn-xs btn-primary">Change</button>
+                        <button type="button" class="btn btn-xs btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" id="btnChangeRole" class="btn btn-xs btn-primary">修改</button>
                     </div>
                 </div>
             </div>
