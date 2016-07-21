@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>交换机详情</title>
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
@@ -57,7 +57,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="page-header">Switch Detail</h3>
+                    <h3 class="page-header">交换机详情</h3>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -67,7 +67,7 @@
                 <div class="col-lg-5">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-info fa-fw"></i>Switch Detail
+                            <i class="fa fa-info fa-fw"></i>交换机详情
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -80,27 +80,27 @@
                                     <td>: <span id="dpid"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Version</b></td>
+                                    <td><b>版本</b></td>
                                     <td>: <span class="version"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Vendor</b></td>
+                                    <td><b>供应商</b></td>
                                     <td>: <span id="manufacturerDescription"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Hardware Info</b></td>
+                                    <td><b>硬件信息</b></td>
                                     <td>: <span id="hardwareDescription"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Software Version</b></td>
+                                    <td><b>软件版本</b></td>
                                     <td>: <span id="softwareDescription"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Serial Number</b></td>
+                                    <td><b>序列号</b></td>
                                     <td>: <span id="serialNumber"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Datapath</b></td>
+                                    <td><b>数据通路</b></td>
                                     <td>: <span id="datapathDescription"></span></td>
                                 </tr>
 
@@ -115,22 +115,22 @@
                 <div class="col-lg-4">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-info fa-fw"></i> Flow Summary
+                            <i class="fa fa-info fa-fw"></i> 流总计
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <table class="table table-hover">
 
                                 <tr>
-                                    <td><b> Flow Count</b></td>
+                                    <td><b> 流数量</b></td>
                                     <td>: <span id="flowCount"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Packet Count</b></td>
+                                    <td><b>数据包数量</b></td>
                                     <td>: <span id="packetCount"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Byte</b></td>
+                                    <td><b>大小(Byte)</b></td>
                                     <td>: <span id="byteCount"></span></td>
                                 </tr>
                                 <tr>
@@ -138,11 +138,11 @@
                                     <td>: <span id="flags"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Buffer</b></td>
+                                    <td><b>缓存</b></td>
                                     <td>: <span id="bufferCount"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Table Count</b></td>
+                                    <td><b>流表数量</b></td>
                                     <td>: <span id="tableCount"></span></td>
                                 </tr>
 
@@ -157,7 +157,7 @@
                 <div class="col-lg-3">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-user fa-fw"></i> Role Info
+                            <i class="fa fa-user fa-fw"></i> 角色信息
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -165,22 +165,22 @@
                             <div class="form-group">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" id="rbMASTER" name="iCheck"> MASTER
+                                        <input type="radio" id="rbMASTER" name="iCheck"> 主
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" id="rbSLAVE" name="iCheck"> SLAVE
+                                        <input type="radio" id="rbSLAVE" name="iCheck"> 从
                                     </label>
                                 </div>
 
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" id="rbEQUAL" name="iCheck"> EQUAL
+                                        <input type="radio" id="rbEQUAL" name="iCheck"> 同级
                                     </label>
                                 </div>
                             </div>
-                            <button type="button" id="btnChangeRole" class="btn btn-primary">Change</button>
+                            <button type="button" id="btnChangeRole" class="btn btn-primary">修改</button>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -195,7 +195,7 @@
 
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-info fa-fw"></i> Port Table
+                            <i class="fa fa-info fa-fw"></i> 端口表
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -204,15 +204,15 @@
                                    id="portTable">
                                 <thead>
                                 <tr>
-                                    <th>No</th>
-                                    <th>R. Packets</th>
-                                    <th>Tran. Packets</th>
-                                    <th>R. Bytes</th>
-                                    <th>Tran. Bytes</th>
-                                    <th>R. Dropped</th>
-                                    <th>Tran. Dropped</th>
-                                    <th>Coll.</th>
-                                    <th>Duration(s)</th>
+                                    <th>编号</th>
+                                    <th>收到的数据包</th>
+                                    <th>传输的数据包</th>
+                                    <th>收到的Bytes数</th>
+                                    <th>传输的Bytes数</th>
+                                    <th>丢弃的数据包</th>
+                                    <th>传输被丢去的数据包</th>
+                                    <th>统计量</th>
+                                    <th>持续时间</th>
 
                                 </tr>
                                 </thead>
@@ -242,7 +242,7 @@
 
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-info fa-fw"></i> Flow Table
+                            <i class="fa fa-info fa-fw"></i> 流表
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -250,15 +250,15 @@
                                    id="flowTable">
                                 <thead>
                                 <tr>
-                                    <th>Table No</th>
-                                    <th>Pkt.Count</th>
+                                    <th>表编号</th>
+                                    <th>包数</th>
                                     <th>Byte</th>
-                                    <th>Duration(s)</th>
-                                    <th>Priority</th>
-                                    <th>IdleTimeoutSec</th>
-                                    <th>HardTimeoutSec</th>
+                                    <th>持续时间</th>
+                                    <th>优先级</th>
+                                    <th>软超时</th>
+                                    <th>硬超时</th>
                                     <th>Flags</th>
-                                    <th>Instructions</th>
+                                    <th>动作</th>
                                 </tr>
                                 </thead>
                             </table>
@@ -278,7 +278,7 @@
 
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-table fa-fw"></i>Tables
+                            <i class="fa fa-table fa-fw"></i>表
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -286,10 +286,10 @@
                                    id="switchTables">
                                 <thead>
                                 <tr>
-                                    <th>tableId</th>
-                                    <th>activeCount</th>
-                                    <th>lookUpCount</th>
-                                    <th>matchCount</th>
+                                    <th>表号</th>
+                                    <th>激活量</th>
+                                    <th>查找量</th>
+                                    <th>匹配量</th>
                                 </tr>
                                 </thead>
                             </table>
@@ -303,45 +303,45 @@
 
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-info fa-fw"></i> Groups
+                            <i class="fa fa-info fa-fw"></i> 组
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <table class="table table-hover">
                                 <tr>
-                                    <td><b>capabilities</b></td>
+                                    <td><b>容量</b></td>
                                     <td>: <span id="capabilities"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>maxGroupsAll</b></td>
+                                    <td><b>最大组</b></td>
                                     <td>: <span id="maxGroupsAll"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>maxGroupsSelect</b></td>
+                                    <td><b>最大选择组</b></td>
                                     <td>: <span id="maxGroupsSelect"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>maxGroupsIndirect</b></td>
+                                    <td><b>最大中间组</b></td>
                                     <td>: <span id="maxGroupsIndirect"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>maxGroupsFf</b></td>
+                                    <td><b>最大组F</b></td>
                                     <td>: <span id="maxGroupsFf"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>actionsAll</b></td>
+                                    <td><b>所有动作</b></td>
                                     <td>: <span id="actionsAll"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>actionsSelect</b></td>
+                                    <td><b>选择的动作</b></td>
                                     <td>: <span id="actionsSelect"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>actionsIndirect</b></td>
+                                    <td><b>间接动作</b></td>
                                     <td>: <span id="actionsIndirect"></span></td>
                                 </tr>
                                 <tr>
-                                    <td><b>actionsFf</b></td>
+                                    <td><b>动作Ff</b></td>
                                     <td>: <span id="actionsFf"></span></td>
                                 </tr>
                             </table>
@@ -363,17 +363,17 @@
                                     aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
-                            <h4 class="modal-title" id="myModalLabel2">Bandwitdh Consumption</h4>
+                            <h4 class="modal-title" id="myModalLabel2">带宽详情</h4>
                         </div>
                         <div class="modal-body">
 
                             <table class='table table-hover' id="statTable">
                                 <thead>
                                 <tr>
-                                    <th>Port</th>
-                                    <th>Updated On</th>
-                                    <th>Bps (RX)</th>
-                                    <th>Bps (TX)</th>
+                                    <th>端口</th>
+                                    <th>更新时间</th>
+                                    <th>速率（接受）</th>
+                                    <th>速率 (发送)</th>
                                 </tr>
                                 </thead>
                             </table>
