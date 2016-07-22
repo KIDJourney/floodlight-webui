@@ -189,21 +189,21 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Switch</th>
-                                <th>InPort</th>
-                                <th>Source</th>
-                                <th>Dest.</th>
+                                <th>交换机</th>
+                                <th>进入端口</th>
+                                <th>源</th>
+                                <th>目的</th>
                                 <th>DL</th>
-                                <th>Source IP</th>
-                                <th>MaskBit</th>
-                                <th>Dest. IP</th>
-                                <th>MaskBit</th>
-                                <th>Protocol</th>
-                                <th>Source Port</th>
-                                <th>Dest. Port</th>
+                                <th>源IP</th>
+                                <th>子网掩码</th>
+                                <th>目的IP</th>
+                                <th>子网掩码</th>
+                                <th>协议</th>
+                                <th>源端口</th>
+                                <th>目的端口</th>
                                 <th>Pri.</th>
                                 <th>Act.</th>
-                                <th>Delete</th>
+                                <th>删除</th>
                             </tr>
                             </thead>
                             <tbody></tbody>
@@ -228,19 +228,19 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Switch ID</label>
+                            <label>交换机名称</label>
                             <input class="form-control" type="text" id="switchid" placeholder="Switch MAC address">
 
-                            <label>Source Port</label>
+                            <label>源端口</label>
                             <input class="form-control" type="text" id="src-inport" placeholder="Source port">
 
-                            <label>Source MAC</label>
+                            <label>源MAC</label>
                             <input class="form-control" type="text" id="src-mac" placeholder="Source MAC address">
 
-                            <label>Dest. MAC</label>
+                            <label>目的MAC</label>
                             <input class="form-control" type="text" id="dst-mac" placeholder="Dest MAC address">
 
-                            <label>Dl Type</label>
+                            <label>Dl类型</label>
                             <div class="radio">
                                 <label>
                                     <input type="radio" id="rbARP" name="check2" checked="checked"/> ARP
@@ -250,13 +250,13 @@
                                 </label>
                             </div>
 
-                            <label>Source IPv4</label>
+                            <label>源IPv4</label>
                             <input class="form-control" type="text" id="src-ip" placeholder="A.B.C.D/M">
 
-                            <label>Dest. IPv4</label>
+                            <label>目的IPv4</label>
                             <input class="form-control" type="text" id="dst-ip" placeholder="A.B.C.D/M">
 
-                            <label>Protocol</label>
+                            <label>协议</label>
                             <div class="radio">
                                 <label>
                                     <input type="radio" id="rbTCP" name="check3" checked="checked"/> TCP
@@ -270,16 +270,16 @@
                                 </label>
                             </div>
 
-                            <label>Source TP</label>
+                            <label>源TP</label>
                             <input class="form-control" type="text" id="tp-src" placeholder="Source Tp">
 
-                            <label>Dest. TP</label>
+                            <label>目的TP</label>
                             <input class="form-control" type="text" id="tp-dst" placeholder="Dest Tp">
 
-                            <label>Priority</label>
+                            <label>优先级</label>
                             <input class="form-control" type="text" id="priority" placeholder="Priority">
 
-                            <label>Action</label>
+                            <label>动作</label>
                             <div class="radio">
                                 <label>
                                     <input type="radio" id="rbAllow" name="check1" checked="checked"/> ALLOW

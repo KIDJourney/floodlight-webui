@@ -122,7 +122,7 @@
         <!-- /.row -->
         <div class="row">
             <div class="col-lg-3 col-md-6">
-                <div class="panel panel-red">
+                <div class="panel panel-info">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3">
@@ -144,7 +144,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="panel panel-red">
+                <div class="panel panel-info">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3">
@@ -166,7 +166,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="panel panel-red">
+                <div class="panel panel-info">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3">
@@ -188,7 +188,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="panel panel-red">
+                <div class="panel panel-info">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3">
@@ -524,14 +524,14 @@
                 var healthy = data["healthy"];
 
                 if (healthy == "1") {
-                    $("#controllerStatus").html("Active");
+                    $("#controllerStatus").html("激活");
 
                     $("#controllerStatusPanel").removeClass("panel-green");
                     $("#controllerStatusPanel").addClass("panel-green");
                     $("#controllerStatusIcon").addClass("glyphicon glyphicon-ok fa-5x");
                 }
                 else {
-                    $("#controllerStatus").html("Passive");
+                    $("#controllerStatus").html("未激活");
                     $("#controllerStatusPanel").removeClass("panel-green");
                     $("#controllerStatusPanel").addClass("panel-red");
                     $("#controllerStatusIcon").removeClass("glyphicon glyphicon-ok fa-5x")

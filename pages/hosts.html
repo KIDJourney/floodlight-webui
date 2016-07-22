@@ -86,10 +86,10 @@
                                 <thead>
                                 <tr>
                                     <th>MAC</th>
-                                    <th>IPv4 Address</th>
-                                    <th>IPv6 Address</th>
-                                    <th>Switch</th>
-                                    <th>Port</th>
+                                    <th>IPv4地址</th>
+                                    <th>IPv6地址</th>
+                                    <th>交换机</th>
+                                    <th>端口</th>
                                     <th>上次发现时间</th>
                                 </tr>
                                 </thead>
@@ -179,8 +179,8 @@
                 {data: 'mac'},
                 {data: 'ipv4'},
                 {data: 'ipv6'},
-                {data: 'attachmentPoint[0].switchDPID'},
-                {data: 'attachmentPoint[0].port'},
+                {data: 'attachmentPoint[0].switch'},
+                {data: 'attachmentPoint[0].port.portNumber'},
                 {data: 'lastSeen'}
             ]
         });

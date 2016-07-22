@@ -274,14 +274,14 @@
 
 
             <div class="row">
-                <div class="col-md-8">
+                <!--<div class="col-md-8">
 
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <i class="fa fa-table fa-fw"></i>表
                         </div>
                         <!-- /.panel-heading -->
-                        <div class="panel-body">
+                        <!--<div class="panel-body">
                             <table class='table table-bordered table-striped table-hover responsive-utilities'
                                    id="switchTables">
                                 <thead>
@@ -295,17 +295,16 @@
                             </table>
                         </div>
                         <!-- /.panel-body -->
-                    </div>
+                    <!--</div>-->
 
 
-                </div>
-                <div class="col-md-4">
+                <!-- </div> -->
+                <!--<div class="col-md-4">-->
 
-                    <div class="panel panel-primary">
+<!--                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <i class="fa fa-info fa-fw"></i> 组
                         </div>
-                        <!-- /.panel-heading -->
                         <div class="panel-body">
                             <table class="table table-hover">
                                 <tr>
@@ -346,13 +345,12 @@
                                 </tr>
                             </table>
                         </div>
-                        <!-- /.panel-body -->
                     </div>
-
-
+ -->
+<!-- 
                 </div>
             </div>
-
+ -->
 
             <!-- Small modal -->
             <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
@@ -463,11 +461,11 @@
         success: function (data) {
 
             $(".version").html(data.desc["version"]);
-            $("#hardwareDescription").html(data.desc["hardwareDescription"]);
-            $("#manufacturerDescription").html(data.desc["manufacturerDescription"]);
-            $("#softwareDescription").html(data.desc["softwareDescription"]);
-            $("#serialNumber").html(data.desc["serialNumber"]);
-            $("#datapathDescription").html(data.desc["datapathDescription"]);
+            $("#hardwareDescription").html(data.desc["hardware_description"]);
+            $("#manufacturerDescription").html(data.desc["manufacturer_description"]);
+            $("#softwareDescription").html(data.desc["software_description"]);
+            $("#serialNumber").html(data.desc["serial_number"]);
+            $("#datapathDescription").html(data.desc["datapath_description"]);
 
             if (sId != "")
                 $(".macAddress").html(sId);
@@ -479,26 +477,26 @@
     });
 
 
-    //GROUP BİLGİSİ
-    $.ajax({
-        url: " http://" + ipaddress + ":" + restport + "/wm/core/switch/" + sId + "/group-features/json",
-        success: function (data) {
-            console.log(data);
-            $("#capabilities").html(data.groupFeatures["capabilities"]);
-            $("#maxGroupsAll").html(data.groupFeatures["maxGroupsAll"]);
-            $("#maxGroupsSelect").html(data.groupFeatures["maxGroupsSelect"]);
-            $("#maxGroupsIndirect").html(data.groupFeatures["maxGroupsIndirect"]);
-            $("#maxGroupsFf").html(data.groupFeatures["maxGroupsFf"]);
+    // //GROUP BİLGİSİ
+    // $.ajax({
+    //     url: " http://" + ipaddress + ":" + restport + "/wm/core/switch/" + sId + "/group-features/json",
+    //     success: function (data) {
+    //         console.log(data);
+    //         $("#capabilities").html(data.groupFeatures["capabilities"]);
+    //         $("#maxGroupsAll").html(data.groupFeatures["maxGroupsAll"]);
+    //         $("#maxGroupsSelect").html(data.groupFeatures["maxGroupsSelect"]);
+    //         $("#maxGroupsIndirect").html(data.groupFeatures["maxGroupsIndirect"]);
+    //         $("#maxGroupsFf").html(data.groupFeatures["maxGroupsFf"]);
 
-            $("#actionsAll").html(data.groupFeatures["actionsAll"]);
-            $("#actionsSelect").html(data.groupFeatures["actionsSelect"]);
-            $("#actionsIndirect").html(data.groupFeatures["actionsIndirect"]);
-            $("#actionsFf").html(data.groupFeatures["actionsFf"]);
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            alert('Hata: ' + " " + jqXHR.responseText + " \n Status: " + textStatus + " \n Error Thrown: " + errorThrown);
-        }
-    });
+    //         $("#actionsAll").html(data.groupFeatures["actionsAll"]);
+    //         $("#actionsSelect").html(data.groupFeatures["actionsSelect"]);
+    //         $("#actionsIndirect").html(data.groupFeatures["actionsIndirect"]);
+    //         $("#actionsFf").html(data.groupFeatures["actionsFf"]);
+    //     },
+    //     error: function (jqXHR, textStatus, errorThrown) {
+    //         alert('Hata: ' + " " + jqXHR.responseText + " \n Status: " + textStatus + " \n Error Thrown: " + errorThrown);
+    //     }
+    // });
 
 
     ///ANAHTAR DETAY BİLGİSİ
@@ -507,9 +505,9 @@
         success: function (data) {
 
             $(".version").html(data.aggregate["version"]);
-            $("#flowCount").html(data.aggregate["flowCount"]);
-            $("#packetCount").html(data.aggregate["packetCount"]);
-            $("#byteCount").html(data.aggregate["byteCount"]);
+            $("#flowCount").html(data.aggregate["flow_count"]);
+            $("#packetCount").html(data.aggregate["packet_count"]);
+            $("#byteCount").html(data.aggregate["byte_count"]);
             $("#flags").html(data.aggregate["flags"]);
 
         },
@@ -541,15 +539,15 @@
                 ],
 
                 "aoColumns": [
-                    {"mData": 'port.0.portNumber'},
-                    {"mData": 'port.0.receivePackets'},
-                    {"mData": 'port.0.transmitPackets'},
-                    {"mData": 'port.0.receiveBytes'},
-                    {"mData": 'port.0.transmitBytes'},
-                    {"mData": 'port.0.receiveDropped'},
-                    {"mData": 'port.0.transmitDropped'},
+                    {"mData": 'port.0.port_number'},
+                    {"mData": 'port.0.receive_packets'},
+                    {"mData": 'port.0.transmit_packets'},
+                    {"mData": 'port.0.receive_bytes'},
+                    {"mData": 'port.0.transmit_bytes'},
+                    {"mData": 'port.0.receive_dropped'},
+                    {"mData": 'port.0.transmit_dropped'},
                     {"mData": 'port.0.collisions'},
-                    {"mData": 'port.0.durationSec'}
+                    {"mData": 'port.0.duration_sec'}
                 ]
             });
 
@@ -573,13 +571,13 @@
             $('#flowTable').DataTable({
                 data: dat["flows"],
                 columns: [
-                    {data: 'tableId'},
-                    {data: 'packetCount'},
-                    {data: 'byteCount'},
-                    {data: 'durationSeconds'},
+                    {data: 'table_id'},
+                    {data: 'packet_count'},
+                    {data: 'byte_count'},
+                    {data: 'duration_sec'},
                     {data: 'priority'},
-                    {data: 'idleTimeoutSec'},
-                    {data: 'hardTimeoutSec'},
+                    {data: 'idle_timeout_s'},
+                    {data: 'hard_timeout_s'},
                     {data: 'flags'},
                     {data: 'instructions.instruction_apply_actions.actions'}
                 ]
@@ -669,27 +667,27 @@
 
 
     ///ANAHTAR TABLOLARI
-    $.ajax({
-        url: "http://" + ipaddress + ":" + restport + "/wm/core/switch/" + sId + "/table/json",
-        success: function (dat) {
-            $('#switchTables').DataTable({
-                data: dat["table"],
-                columns: [
-                    {data: 'tableId'},
-                    {data: 'activeCount'},
-                    {data: 'lookUpCount'},
-                    {data: 'matchCount'}
-                ]
-            });
+    // $.ajax({
+    //     url: "http://" + ipaddress + ":" + restport + "/wm/core/switch/" + sId + "/table/json",
+    //     success: function (dat) {
+    //         $('#switchTables').DataTable({
+    //             data: dat["table"],
+    //             columns: [
+    //                 {data: 'tableId'},
+    //                 {data: 'activeCount'},
+    //                 {data: 'lookUpCount'},
+    //                 {data: 'matchCount'}
+    //             ]
+    //         });
 
 
-        }
-        ,
-        error: function (xhr, status, error) {
-            alert("Hata==" + xhr.responseText);
-            return "";
-        }
-    });
+    //     }
+    //     ,
+    //     error: function (xhr, status, error) {
+    //         alert("Hata==" + xhr.responseText);
+    //         return "";
+    //     }
+    // });
 
 
     function getStatistic(portId) {
