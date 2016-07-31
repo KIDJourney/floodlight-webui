@@ -388,14 +388,14 @@
             success: function (data) {
 
                 if (data["result"] == "firewall disabled") {
-                    $("#firewallStatus").html("Passive");
+                    $("#firewallStatus").html("未激活");
                     $("#firewallStatusPanel").removeClass("panel-green");
                     $("#firewallStatusPanel").addClass("panel-red");
                     $("#firewallStatusIcon").removeClass("glyphicon glyphicon-ok fa-5x")
                     $("#firewallStatusIcon").addClass("glyphicon glyphicon-remove fa-5x");
                 }
                 else {
-                    $("#firewallStatus").html("Active");
+                    $("#firewallStatus").html("已激活");
                     $("#firewallStatusPanel").removeClass("panel-red");
                     $("#firewallStatusIcon").removeClass("glyphicon glyphicon-remove fa-5x");
                     $("#firewallStatusPanel").addClass("panel-green");
